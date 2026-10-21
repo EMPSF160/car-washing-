@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary: #070A10; /* Midnight Titanium */
+        --accent: #10B981; /* Pure Emerald */
+        --accent-neon: #00F090; /* Radiant Neon Glow */
+        --slate-dark: #0B111B;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply transition-colors duration-300 ease-in-out font-sans bg-slate-50 text-slate-900 dark:bg-[#070A10] dark:text-slate-100;
+        font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #070A10;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #10B981;
+        border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #00F090;
+    }
+
+    /* RTL specific centering fixes */
+    [dir="rtl"] .ltr-only {
+        @apply hidden;
+    }
+}
+
+@layer components {
+    .btn-emerald {
+        @apply px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-2xl transition-all duration-300 transform hover:scale-[1.03] shadow-lg shadow-emerald-500/25 active:scale-95 inline-flex items-center justify-center gap-2;
+    }
+
+    .btn-outline-emerald {
+        @apply px-8 py-4 border-2 border-emerald-500/40 text-emerald-400 hover:border-emerald-400 hover:bg-emerald-500/10 font-bold rounded-2xl transition-all duration-300 transform hover:scale-[1.03] active:scale-95 inline-flex items-center justify-center gap-2;
+    }
+
+    .glass-card {
+        @apply bg-white/80 dark:bg-[#0F1724]/70 backdrop-blur-xl border border-slate-200/80 dark:border-emerald-500/15 shadow-xl;
+    }
+
+    .glass-nav {
+        @apply bg-white/85 dark:bg-[#070A10]/85 backdrop-blur-md border-b border-slate-200/60 dark:border-emerald-500/10;
+    }
+
+    .neon-pill {
+        @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest bg-emerald-500/10 text-emerald-500 dark:text-emerald-400 border border-emerald-500/30 shadow-sm shadow-emerald-500/10;
+    }
+
+    .section-title {
+        @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-outfit font-black uppercase tracking-tight text-slate-900 dark:text-white leading-tight;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.25); }
+    50% { box-shadow: 0 0 40px rgba(0, 240, 144, 0.5); }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+}
+
+.animate-up {
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+    animation: float 5s ease-in-out infinite;
+}
+
+.animate-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Before / After Comparison Slider Container */
+.comparison-container {
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    border-radius: 1.5rem;
+}
+
+.comparison-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.comparison-before img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: none;
+}
+
+.comparison-slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: #10B981;
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px rgba(0, 240, 144, 0.8);
+    cursor: ew-resize;
+}
+
+.comparison-slider-handle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42px;
+    height: 42px;
+    background: #10B981;
+    border: 4px solid #070A10;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23070A10' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+}

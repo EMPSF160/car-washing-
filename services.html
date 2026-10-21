@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth overflow-x-hidden">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | HydroShine Premium Detailing</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                            950: '#022c22'
+                        },
+                        titanium: {
+                            800: '#151d2a',
+                            850: '#0f1724',
+                            900: '#0b111b',
+                            950: '#070a10'
+                        },
+                        neon: {
+                            emerald: '#00F090',
+                            glow: '#10B981'
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], outfit: ['Outfit', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white dark:bg-[#070A10] text-slate-900 dark:text-gray-100 transition-colors duration-300 overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/85 dark:bg-[#070A10]/90 backdrop-blur-md shadow-sm border-b border-slate-200/80 dark:border-emerald-500/10">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between relative">
+            <a href="index.html" class="flex items-center gap-3 sm:gap-4 group shrink-0">
+                <img src="assets/images/logo.png" alt="HydroShine Logo" class="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:scale-110 transition-transform">
+                <span class="text-2xl md:text-3xl font-outfit font-black uppercase tracking-widest text-emerald-500 dark:text-[#00F090]">HydroShine</span>
+            </a>
+            <div class="hidden xl:flex items-center gap-8 text-sm font-black uppercase tracking-widest absolute left-1/2 transform -translate-x-1/2">
+                <a href="index.html"
+                    class="hover:text-emerald-500 transition-colors text-slate-900 dark:text-white whitespace-nowrap">Home</a>
+                <a href="services.html" class="text-emerald-500 dark:text-[#00F090] whitespace-nowrap">Services</a>
+                <a href="about.html"
+                    class="hover:text-emerald-500 transition-colors text-slate-900 dark:text-white whitespace-nowrap">About</a>
+                <a href="pricing.html"
+                    class="hover:text-emerald-500 transition-colors text-slate-900 dark:text-white whitespace-nowrap">Pricing</a>
+                <a href="contact.html"
+                    class="hover:text-emerald-500 transition-colors text-slate-900 dark:text-white whitespace-nowrap">Contact</a>
+                <a href="dashboard.html"
+                    class="px-4 py-1.5 bg-emerald-500 text-slate-950 rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all font-black shadow-lg shadow-emerald-500/20 whitespace-nowrap text-[10px] uppercase tracking-widest">Dashboard</a>
+            </div>
+            <div class="flex items-center gap-1 sm:gap-4">
+                <button id="theme-toggle"
+                    class="p-2 rounded-full text-slate-900 dark:text-white hover:bg-emerald-100 dark:hover:bg-emerald-900/30 transition-all">
+                    <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                    <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                </button>
+                <button id="rtl-toggle"
+                    class="p-2 text-[10px] font-black uppercase text-slate-900 dark:text-white hover:text-emerald-500 transition-colors">RTL</button>
+                <a href="signup.html"
+                    class="hidden xl:flex px-4 sm:px-6 py-2 bg-emerald-500 text-slate-950 font-black text-[10px] sm:text-xs uppercase tracking-widest rounded-full hover:bg-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-emerald-500/20 whitespace-nowrap">Sign Up</a>
+                <button id="menu-btn" class="xl:hidden p-2 text-slate-900 dark:text-white"><i data-lucide="menu" id="menu-icon" class="w-7 h-7"></i></button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden xl:hidden flex-col items-center py-8 space-y-6 bg-white dark:bg-[#0B111B] shadow-xl border-t border-slate-200 dark:border-emerald-500/20">
+            <a href="index.html" class="text-xl font-bold hover:text-emerald-500 transition-colors">Home</a>
+            <a href="services.html" class="text-xl font-bold text-emerald-500">Services</a>
+            <a href="about.html" class="text-xl font-bold hover:text-emerald-500 transition-colors">About</a>
+            <a href="pricing.html" class="text-xl font-bold hover:text-emerald-500 transition-colors">Pricing</a>
+            <a href="contact.html" class="text-xl font-bold hover:text-emerald-500 transition-colors">Contact</a>
+            <a href="dashboard.html" class="w-2/3 px-8 py-4 bg-emerald-500 text-slate-950 font-black text-xl rounded-2xl shadow-xl shadow-emerald-500/20 text-center hover:scale-105 active:scale-95 transition-all">Dashboard</a>
+            <a href="signup.html" class="w-2/3 px-8 py-4 bg-emerald-500 text-slate-950 font-black text-xl rounded-2xl shadow-xl shadow-emerald-500/20 text-center mt-4 hover:scale-105 active:scale-95 transition-all">Sign Up</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- [1] Services Hero -->
+        <section class="relative min-h-[75vh] flex items-center pt-32 lg:pt-40 pb-20 bg-emerald-50 dark:bg-black overflow-hidden transition-colors duration-500">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1599256621730-535171e28e50?auto=format&fit=crop&q=100&w=2000" alt="Master Detailing" class="w-full h-full object-cover opacity-30 dark:opacity-40 scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-emerald-50 via-emerald-50/50 to-transparent dark:from-black dark:via-black/80"></div>
+            </div>
+
+            <div class="container mx-auto px-4 md:px-16 lg:px-24 relative z-10 flex flex-col items-center text-center">
+                <div class="space-y-8 flex flex-col items-center">
+                    <div class="inline-block px-4 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-500 text-xs font-black uppercase tracking-widest">Precision Care</div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-outfit font-black uppercase tracking-tighter leading-tight mb-8 italic">The Art of <span class="text-emerald-500">Restoration.</span></h1>
+                    <p class="text-lg md:text-xl text-emerald-900/70 dark:text-gray-400 max-w-2xl font-medium mx-auto">From molecular-level cleaning to advanced paint protection, our services are engineered for the ultimate showroom glow.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- [2] Core Detailing Services -->
+        <section class="py-32 bg-white dark:bg-black">
+            <div class="container mx-auto px-10 md:px-16 lg:px-24 space-y-24">
+                <div class="text-center space-y-4">
+                    <h2 class="text-4xl md:text-6xl font-outfit font-black uppercase tracking-tighter">Our <span class="text-emerald-500 italic">Signature</span> Menu</h2>
+                    <div class="w-24 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <!-- Exterior Mastery -->
+                    <div class="group relative p-10 lg:p-6 xl:p-10 border-b lg:border-b-0 lg:border-r border-emerald-500/10 hover:scale-105 transition-all duration-500 text-center flex flex-col items-center cursor-pointer">
+                        <div class="w-16 h-16 bg-emerald-500 text-emerald-950 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform mx-auto">
+                            <i data-lucide="droplets" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase italic mb-4">Exterior Mastery</h3>
+                        <p class="text-emerald-900/60 dark:text-emerald-100/40 text-sm leading-relaxed mb-8">Not a wash, but a renovation. Using waterless polymer technology to safely Lift dirt and infuse shine.</p>
+                        <ul class="space-y-3 mb-8 text-left">
+                            <li class="flex items-center gap-3 text-xs lg:text-[11px] xl:text-xs font-bold uppercase"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> Clay Bar Decontamination</li>
+                            <li class="flex items-center gap-3 text-xs lg:text-[11px] xl:text-xs font-bold uppercase"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> Carnauba Wax Infusion</li>
+                            <li class="flex items-center gap-3 text-xs lg:text-[11px] xl:text-xs font-bold uppercase"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> Wheel Arch Grooming</li>
+                        </ul>
+                        <div class="mt-auto pt-6 border-t border-emerald-100 dark:border-emerald-800 w-full flex justify-center">
+                             <a href="pricing.html" class="px-8 py-3 bg-emerald-500 text-emerald-950 font-black text-xs uppercase tracking-[0.2em] rounded-full shadow-lg shadow-emerald-500/20 hover:scale-110 hover:shadow-emerald-500/40 transition-all duration-300">
+                                Starting at $39
+                             </a>
+                        </div>
+                    </div>
+
+                    <!-- Interior Purify -->
+                    <div class="group relative p-10 lg:p-6 xl:p-10 border-b lg:border-b-0 lg:border-r border-emerald-500/10 lg:scale-105 z-10 text-center flex flex-col items-center hover:scale-[1.1] transition-all duration-500 cursor-pointer">
+                        <div class="w-16 h-16 bg-emerald-500 text-emerald-950 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-emerald-500/10 group-hover:scale-110 transition-transform mx-auto">
+                            <i data-lucide="wind" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase italic mb-4">Interior Purify</h3>
+                        <p class="text-emerald-950/60 dark:text-emerald-100/60 text-sm leading-relaxed mb-8">A clinical approach to cabin hygiene. Removing allergens and restoring materials to factory-fresh condition.</p>
+                        <ul class="space-y-3 mb-8 text-left">
+                            <li class="flex items-center gap-3 text-xs lg:text-[11px] xl:text-xs font-bold uppercase"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> Ozone Air Treatment</li>
+                            <li class="flex items-center gap-3 text-xs lg:text-[11px] xl:text-xs font-bold uppercase"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> Leather pH Balancing</li>
+                            <li class="flex items-center gap-3 text-xs lg:text-[11px] xl:text-xs font-bold uppercase"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> Deep Fiber Steaming</li>
+                        </ul>
+                        <div class="mt-auto pt-6 border-t border-emerald-500/20 dark:border-emerald-800 w-full flex justify-center">
+                             <a href="pricing.html" class="px-8 py-3 bg-emerald-950 text-emerald-500 font-black text-xs uppercase tracking-[0.2em] rounded-full shadow-2xl hover:scale-110 hover:bg-black transition-all duration-300">
+                                Starting at $79
+                             </a>
+                        </div>
+                        <div class="absolute -top-4 right-8 bg-emerald-500 text-emerald-950 text-[10px] font-black uppercase tracking-[0.2em] px-4 py-2 rounded-full shadow-lg">Most Popular</div>
+                    </div>
+
+                    <!-- Shield+ Protection -->
+                    <div class="group relative p-10 lg:p-6 xl:p-10 hover:scale-105 transition-all duration-500 text-center flex flex-col items-center cursor-pointer">
+                        <div class="w-16 h-16 bg-emerald-500 text-emerald-950 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-emerald-500/20 group-hover:scale-110 transition-transform mx-auto">
+                            <i data-lucide="shield-check" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase italic mb-4">Shield+ Protection</h3>
+                        <p class="text-emerald-900/60 dark:text-emerald-100/40 text-sm leading-relaxed mb-8">Future-proofing your investment. Molecular coatings that repel water, dust, and UV damage.</p>
+                        <ul class="space-y-3 mb-8 text-left">
+                            <li class="flex items-center gap-3 text-xs lg:text-[11px] xl:text-xs font-bold uppercase"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> Glass Hydrophobic Layer</li>
+                            <li class="flex items-center gap-3 text-xs lg:text-[11px] xl:text-xs font-bold uppercase"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> UV-Blocked Trim Glaze</li>
+                            <li class="flex items-center gap-3 text-xs lg:text-[11px] xl:text-xs font-bold uppercase"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> Nano-Bond Protection</li>
+                        </ul>
+                        <div class="mt-auto pt-6 border-t border-emerald-100 dark:border-emerald-800 w-full flex justify-center">
+                             <a href="pricing.html" class="px-8 py-3 bg-emerald-500 text-emerald-950 font-black text-xs uppercase tracking-[0.2em] rounded-full shadow-lg shadow-emerald-500/20 hover:scale-110 hover:shadow-emerald-500/40 transition-all duration-300">
+                                Starting at $149
+                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [3] The Process -->
+        <section class="py-32 bg-emerald-500 text-emerald-950 overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+                    <div class="space-y-4">
+                        <h4 class="text-8xl font-outfit font-black opacity-20">01</h4>
+                        <h5 class="text-xl font-black uppercase italic">Digitial Booking</h5>
+                        <p class="text-sm font-semibold opacity-70 leading-relaxed">Select your package and concierge time via our secure portal.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-8xl font-outfit font-black opacity-20">02</h4>
+                        <h5 class="text-xl font-black uppercase italic">On-Site Arrival</h5>
+                        <p class="text-sm font-semibold opacity-70 leading-relaxed">Our Master Detailers arrive fully equipped for a zero-waste session.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-8xl font-outfit font-black opacity-20">03</h4>
+                        <h5 class="text-xl font-black uppercase italic">Atomic Clean</h5>
+                        <p class="text-sm font-semibold opacity-70 leading-relaxed">Dirt is encapsulated at the molecular level and safely removed.</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-8xl font-outfit font-black opacity-20">04</h4>
+                        <h5 class="text-xl font-black uppercase italic">The Reveal</h5>
+                        <p class="text-sm font-semibold opacity-70 leading-relaxed">A mirror-finish reveal that honors both your car and the planet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [3.5] Molecular Technology Section -->
+        <section class="py-32 bg-black text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="text-center space-y-4 mb-24">
+                    <h2 class="text-4xl md:text-7xl font-outfit font-black uppercase italic tracking-tighter">The Science of <br><span class="text-emerald-500">Perfection.</span></h2>
+                    <p class="text-white/40 text-lg md:text-xl max-w-2xl mx-auto uppercase tracking-widest font-bold">Engineering the future of luxury detailing.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-16">
+                    <div class="h-full space-y-6 text-center flex flex-col items-center justify-start">
+                        <i data-lucide="microscope" class="w-12 h-12 text-emerald-500"></i>
+                        <h4 class="text-2xl font-black uppercase italic">Molecular Bonding</h4>
+                        <p class="text-white/50 text-sm leading-relaxed font-medium">
+                            Our proprietary polymers are designed to bond at a microscopic level with your vehicle's factory clear-coat. This creates a resilient, glass-like barrier that actively repels contaminants, UV rays, and environmental fallout for up to 6 months of absolute protection.
+                        </p>
+                    </div>
+                    <div class="space-y-6 text-center flex flex-col items-center">
+                        <i data-lucide="layers" class="w-12 h-12 text-emerald-500"></i>
+                        <h4 class="text-2xl font-black uppercase italic">Micro-Encapsulation</h4>
+                        <p class="text-white/50 text-sm leading-relaxed font-medium">
+                            Instead of abrasive scrubbing, our technology encapsulates dirt and grit particles in a high-lubricity polymer buffer. This allows contaminants to be lifted and wiped away with zero friction, ensuring that even the most delicate finishes remain completely scratch-free.
+                        </p>
+                    </div>
+                    <div class="space-y-6 text-center flex flex-col items-center">
+                        <i data-lucide="zap" class="w-12 h-12 text-emerald-500"></i>
+                        <h4 class="text-2xl font-black uppercase italic">Hydrophobic Restoration</h4>
+                        <p class="text-white/50 text-sm leading-relaxed font-medium">
+                            We restore the natural surface tension of your vehicle's exterior. Our molecular treatment creates an ultra-slick finish that ensures water, ice, and road grime simply bead off at speed. This makes future maintenance significantly easier and prolongs the showroom glow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [4] Service CTA -->
+        <section class="py-32 bg-white dark:bg-black">
+            <div class="container mx-auto px-6">
+                <div class="py-12 md:py-24 text-center space-y-8 relative overflow-hidden border-t border-emerald-500/20">
+                    <div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent"></div>
+                    <h2 class="text-4xl md:text-7xl font-outfit font-black uppercase text-emerald-950 dark:text-white italic leading-none">Ready for the<br><span class="text-emerald-500">Perfect Glow?</span></h2>
+                    <p class="text-emerald-950/60 dark:text-white/60 text-lg md:text-xl max-w-2xl mx-auto">Skip the line and experience the next generation of mobile detailing.</p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <a href="contact.html" class="px-8 py-5 bg-emerald-500 text-emerald-950 font-black text-xl rounded-2xl hover:scale-105 active:scale-95 transition-all w-full md:w-auto text-center">Book Now</a>
+                        <a href="pricing.html" class="px-8 py-5 bg-emerald-950/5 dark:bg-white/10 text-emerald-950 dark:text-white border border-emerald-950/20 dark:border-white/20 font-black text-base rounded-2xl hover:bg-emerald-500 hover:text-emerald-950 transition-all w-full md:w-auto uppercase italic text-center whitespace-nowrap">View Packages</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pt-24 pb-12 bg-slate-50 dark:bg-[#070A10] text-slate-900 dark:text-white border-t border-slate-200 dark:border-emerald-500/10 transition-colors duration-500">
+        <div class="container mx-auto px-4 md:px-16 lg:px-24">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 lg:gap-x-24 xl:gap-x-32 gap-y-16 mb-12 items-start">
+                <!-- About Section -->
+                <div class="space-y-8 flex flex-col items-center sm:items-start text-center sm:text-left">
+                    <a href="index.html" class="flex items-center gap-4 group">
+                        <img src="assets/images/logo.png" alt="HydroShine Logo" class="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:scale-110 transition-transform">
+                        <span class="text-2xl md:text-3xl font-outfit font-black uppercase tracking-widest text-emerald-500 dark:text-[#00F090]">HydroShine</span>
+                    </a>
+                    <p class="text-slate-600 dark:text-slate-400 text-[10px] sm:text-xs font-semibold leading-relaxed max-w-xs uppercase tracking-wider">
+                        Redefining luxury car care through sustainable, waterless technology. Driven by perfection, powered by the planet.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-8 flex flex-col items-center sm:items-start text-center sm:text-left">
+                    <h5 class="text-xs font-black uppercase tracking-[0.3em] text-emerald-500 whitespace-nowrap">Quick Portal</h5>
+                    <ul class="space-y-4 text-sm font-black uppercase italic tracking-tighter">
+                        <li><a href="index.html" class="hover:text-emerald-500 transition-colors">Home Experience</a></li>
+                        <li><a href="services.html" class="hover:text-emerald-500 transition-colors">Services</a></li>
+                        <li><a href="about.html" class="hover:text-emerald-500 transition-colors">Our Story</a></li>
+                        <li><a href="pricing.html" class="hover:text-emerald-500 transition-colors">Pricing Plans</a></li>
+                        <li><a href="contact.html" class="hover:text-emerald-500 transition-colors">Connect</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8 flex flex-col items-center sm:items-start text-center sm:text-left">
+                    <h5 class="text-xs font-black uppercase tracking-[0.3em] text-emerald-500 whitespace-nowrap">Concierge Support</h5>
+                    <ul class="space-y-4 text-sm font-black uppercase italic tracking-tighter">
+                        <li><a href="tel:+18003264567" class="hover:text-emerald-500 transition-colors">+1 (800) HYDRO-SHINE</a></li>
+                        <li><a href="mailto:concierge@hydroshine.com" class="hover:text-emerald-500 transition-colors">concierge@hydroshine.com</a></li>
+                        <li><a href="#" class="hover:text-emerald-500 transition-colors">123 Eco Blvd, Sustainability City</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="space-y-8 flex flex-col items-center sm:items-start text-center sm:text-left">
+                    <h5 class="text-xs font-black uppercase tracking-[0.3em] text-emerald-500 whitespace-nowrap">The Social Circle</h5>
+                    <div class="flex items-center justify-center sm:justify-start gap-8">
+                        <a href="https://facebook.com" class="text-emerald-500 hover:text-emerald-950 dark:hover:text-white transition-all hover:scale-110 group/icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover/icon:rotate-6 transition-transform">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com" class="text-emerald-500 hover:text-emerald-950 dark:hover:text-white transition-all hover:scale-110 group/icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover/icon:-rotate-6 transition-transform">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com" class="text-emerald-500 hover:text-emerald-950 dark:hover:text-white transition-all hover:scale-110 group/icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover/icon:rotate-6 transition-transform">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-200 dark:border-white/10 flex justify-center items-center px-4">
+                <p class="text-[10px] font-black uppercase tracking-[0.2em] md:tracking-[0.5em] text-slate-500 dark:text-white/50 italic text-center leading-loose">
+                    © 2026 HydroShine. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scroll-top"
+        class="fixed bottom-8 right-8 z-50 w-12 h-12 flex items-center justify-center bg-emerald-500 text-emerald-950 rounded-2xl shadow-2xl opacity-0 invisible hover:scale-110 active:scale-95 transition-all"><i
+            data-lucide="chevron-up" class="w-6 h-6"></i></button>
+
+    <script src="assets/js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
